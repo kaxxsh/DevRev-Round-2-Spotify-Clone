@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Mulish&family=Open+Sans:wght@500&display=swap");
+
+* {
+  font-family: "EB Garamond", serif;
+  font-family: "Mulish", sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+.Nav-container {
+  height: 11vh;
+  background: #000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  z-index: 3;
+}
+
+.Nav-Box {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.Logo {
+  width: 12vw;
+  height: 11vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Logo-Img {
+  width: 9vw;
+  height: 6vh;
+  z-index: 4;
+  transform: translatey(3px);
+}
+
+.Nav-Menu {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  /* justify-content: flex-end; */
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+ul {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+ul > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Nav-Menu-Item {
+  width: 6vw;
+  height: 100%;
+  list-style: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+.Nav-Menu-Item-separator {
+  width: 3vh;
+  color: rgba(240, 248, 255, 0.57);
+}
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  text-decoration: none;
+  color: rgb(20, 210, 20);
+}
+
+.Ads-Container {
+  height: 65vh;
+  overflow: auto;
+  background: #1d75de;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Ads-Box {
+  width: 80%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Ads-Title {
+  width: 100%;
+  height: 15%;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+}
+
+.Ads-Description {
+  width: 100%;
+  height: 20%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.Get-Start {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.Get-Start-Button1 {
+  width: 15%;
+  height: 100%;
+  background: #000;
+  border-radius: 2rem;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Get-Start-Button2 {
+  width: 28vh;
+  height: 100%;
+  background: transparent;
+  border-radius: 2rem;
+  border: 1px solid white;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Get-Start-Button1:hover,.Get-Start-Button2:hover{
+  transition: transform .5s ease;
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+.TACA {
+  width: 100%;
+  height: 12%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.TACA-Title {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.Title-Span {
+  text-decoration: underline;
+}
+
+.Premium-container {
+  height: 80vh;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Premium-Box {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.Premium-Title {
+  width: 90%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: 1000;
+}
+
+.Premium-Description {
+  width: 90%;
+  height: 55%;
+  display: flex;
+}
+
+.Description-Box {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.Des-Img {
+  width: 60%;
+  height: 50%;
+  display: flex;
+  align-self: center;
+}
+
+.Des-Title {
+  width: 100%;
+  height: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.Des-Description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.Footer-container {
+  height: 10vh;
+  width: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  color: rgba(245, 245, 245, 0.71);
+}
+
+.Footer-Box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.Footer-ul {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Footer-Menu {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transform: translatex(10vh);
+  /* justify-content: center; */
+}
+
+.Footer-Title {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+}
