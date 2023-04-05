@@ -1,0 +1,17 @@
+.Logo-Signin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Signin-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Signin-Box{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}

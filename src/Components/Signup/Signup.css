@@ -1,0 +1,191 @@
+.Signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  /* height: 100vh; */
+;
+}
+
+.Signup-Box {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.Logo-Signup {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Signup-Title {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  font-weight: 600;
+  color: #000;
+}
+.Facebook,
+.Google,
+.OR {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Facebook-btn {
+  border: none;
+  border-radius: 2rem;
+  width: 90%;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #405a93;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.Google-btn {
+  border: 1px solid black;
+  border-radius: 2rem;
+  width: 90%;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  /* background-color: #405A93; */
+  /* color: #fff; */
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.Facebook-btn:hover,
+.Google-btn:hover {
+  transition: transform 0.5s ease;
+  transform: scale(1.04);
+  overflow: hidden;
+}
+.OR {
+  color: lightslategray;
+}
+
+.Email-Title,
+.Password-Title,
+.Username-Title,
+.Gender-Title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  /* color: #000; */
+}
+.Text-Input {
+  width: 99%;
+  height: 5vh;
+  margin-top: 5px;
+  border: 1px solid black;
+  border-radius: 0.2rem;
+}
+.Email-Container,
+.Password-container,
+.Username-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.Gender-Title {
+  display: flex;
+  gap: 1rem;
+}
+.Gender-options {
+  display: flex;
+  height: 5vh;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1rem;
+  font-weight: 550;
+}
+.Msg-Box,
+.Data-permission {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.TAC,
+.Privacy-Policy {
+  height: 10vh;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.Tac-span,
+.Policy {
+  text-decoration: underline;
+  color: green;
+  /* text-align: center; */
+}
+
+.Privacy-Policy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    text-align: center;
+}
+.Signup-button{
+    width:20vh;
+    height: 8vh;
+    border: none;
+    background-color: #1ed760;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 2rem;
+}
+.Submit-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.Nav-Signin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #000;
+    height: 6vh;
+}
+
+.Signin{
+    text-decoration: underline;
+    color: green;
+}
+label{
+    display: flex;
+    gap: 0.5;
+}
+
+.radio{
+    width: 3vh;
+}
