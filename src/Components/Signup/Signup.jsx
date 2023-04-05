@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import "./Signup.css";
 import { BsFacebook } from "react-icons/Bs";
+import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/Fc";
 import supabase from "../../supabase";
 
@@ -9,6 +10,7 @@ function Signup() {
   const [Password, setPassword] = useState("");
   const [Username, setUsername] = useState("");
   const [Gender, setGender] = useState("");
+  const navigate = useNavigate();
 
   const handleSignup = async () => {
     const { data, error } = await supabase.auth.signUp({
@@ -158,7 +160,7 @@ function Signup() {
               </button>
             </div>
             <div className="Nav-Signin">
-              Have an account? <span className="Signin">Log in</span>
+              Have an account? <span className="Signin" onClick={() =>navigate("/Signin")}>Log in</span>
             </div>
           </div>
         </div>
