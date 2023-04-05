@@ -1,15 +1,12 @@
-import React from "react";
-import "./Spotify.css";
-import LeftMenu from "../LeftMenu/LeftMenu";
+import React from 'react'
+import {LeftMenu} from '../LeftMenu/LeftMenu'
 
 function Spotify() {
   return (
-    <>
-      <div className="Spotify-Container">
-        <LeftMenu />
-      </div>
-    </>
-  );
+      <>
+      <LeftMenu />
+      </>
+  )
 }
 
-export default Spotify;
+export default Spotify

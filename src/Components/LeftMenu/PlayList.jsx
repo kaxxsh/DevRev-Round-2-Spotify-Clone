@@ -7,4 +7,4 @@ const PlayList = [
     {id : 1,name : "Workout Music"},
 ];
 
-export default  PlayList ;
+export { PlayList };

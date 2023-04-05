@@ -3,7 +3,7 @@ import { BsFillVolumeUpFill, BsMusicNoteList } from "react-icons/bs";
 import { FaDesktop } from "react-icons/fa";
 import Track from "../../assets/track.png";
 
-export default function TrackList() {
+function TrackList() {
   return (
     <div className="trackList">
       <div className="top">
@@ -28,4 +28,4 @@ export default function TrackList() {
   );
 }
 
-
+export {TrackList};

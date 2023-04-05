@@ -6,7 +6,7 @@
   color: white;
   padding: 0px 10px; ;
   /* backdrop-filter: blur(10px); */
-  
+
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -132,7 +132,7 @@
 
 .playListContainer {
   cursor: pointer;
-  
+
 }
 
 .playListContainer .nameContainer {
@@ -168,7 +168,7 @@
   height: 3vh;
   align-items: center;
   color: #848484;
-  
+
 }
 
 .playListContainer .playListScroll .playList:hover {

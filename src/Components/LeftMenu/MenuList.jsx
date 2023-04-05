@@ -35,4 +35,4 @@ const MenuList = [
   },
 ];
 
-export default MenuList 
+export { MenuList }

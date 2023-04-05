@@ -1,34 +1,35 @@
 import React from 'react';
 import { FaPlus } from 'react-icons/fa';
 import { BsMusicNoteList, BsTrash } from 'react-icons/bs';
-import PlayList from './PlayList';
+import { PlayList } from './PlayList';
 
-export default function MenuPlayList() {
+function MenuPlayList() {
   return (
-    <div className="playListContainer">
-      <div className="nameContainer">
-        <p>PlayList</p>
-        <i>
-          <FaPlus />
-        </i>
-      </div>
-      <div className="playListScroll">
-        {PlayList &&
-          PlayList.map((list) => (
-            <div className="playList" key={list.id}>
-              <i className="list">
+    <div className='playListContainer'>
+        <div className='nameContainer'>
+            <p>PlayList</p>
+            <i>
+                <FaPlus />
+            </i>
+        </div>
+        <div className="playListScroll">
+            {PlayList && 
+            PlayList.map((list) => (
+                    <div className="playList" key={list.id}>   
+            <i className="list">
                 <BsMusicNoteList />
-              </i>
+            </i>
 
-              <p>{list.name}</p>
+            <p>{list.name}</p>
 
-              <i className="trash">
+            <i className="trash">
                 <BsTrash />
-              </i>
+            </i>
             </div>
-          ))}
-      </div>
+            ))}
+        </div>
     </div>
   );
 }
 
+export  {MenuPlayList}

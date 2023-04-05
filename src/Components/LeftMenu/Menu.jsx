@@ -33,4 +33,4 @@ function Menu({title, menuObject}) {
   );
 }
 
-export default  Menu 
+export  { Menu }
