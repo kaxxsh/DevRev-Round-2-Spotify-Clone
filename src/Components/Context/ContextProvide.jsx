@@ -5,17 +5,17 @@ export const UserContext = createContext();
 function Userprovider({ children }) {
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
-  const [User, setUser] = useState(null);
+  const [User, setUser] = useState("");
 
-  const handleSession = async () => {
-    const { data, error } = await supabase.auth.getSession();
-    setUser(data.session.user.id);
-    // console.log(data, error);
-  };
+  // const handleSession = async () => {
+  //   const { data, error } = await supabase.auth.getSession();
+  //   setUser(data.session.user.id);
+  //   console.log(data, error);
+  // };
 
-  useEffect(() => {
-    handleSession();
-  }, []);
+  // useEffect(() => {
+  //   handleSession();
+  // }, []);
 
   return (
     <UserContext.Provider
