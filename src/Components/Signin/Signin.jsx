@@ -22,7 +22,7 @@ function Signin() {
     if (error) {
       alert(error.message);
     } else {
-      navigate("/");
+      navigate("/Spotify");
     }
   };
   return (
@@ -67,6 +67,7 @@ function Signin() {
             <input
               type="text"
               value={Email}
+              placeholder="Email"
               className="Text-Input"
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -75,8 +76,9 @@ function Signin() {
           <div className="Password">
             <div className="Password-Title">Password</div>
             <input
-              type="text"
+              type="password"
               value={Password}
+              placeholder="Password"
               className="Text-Input"
               onChange={(e) => setPassword(e.target.value)}
             />
