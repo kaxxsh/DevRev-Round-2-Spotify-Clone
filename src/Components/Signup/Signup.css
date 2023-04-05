@@ -35,7 +35,7 @@
 }
 .Facebook,
 .Google,
-.OR {
+.OR,.Signup-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,7 +83,7 @@
 .Email-Title,
 .Password-Title,
 .Username-Title,
-.Gender-Title {
+.Gender-Title,.Forgot-Pass-Title {
   font-size: 0.9rem;
   font-weight: 600;
   /* color: #000; */
@@ -149,7 +149,7 @@
     font-size: 0.8rem;
     text-align: center;
 }
-.Signup-button{
+.Signup-button,.Signin-button{
     width:20vh;
     height: 8vh;
     border: none;
@@ -159,7 +159,7 @@
     font-size: 1rem;
     border-radius: 2rem;
 }
-.Submit-btn{
+.Submit-btn,.Login-btn{
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,17 +1,116 @@
-.Logo-Signin{
+.Logo-Signin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Signin-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Signin-Box {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.Sigin-Title {
+  width: 100%;
+  height: 6vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: bolder;
+  font-weight: 600;
+  color: #000;
+}
+
+.Facebook,
+.Google,.Phone,
+.OR {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Facebook-btn {
+  border: none;
+  border-radius: 2rem;
+  width: 90%;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #405a93;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.Google-btn,.Phone-btn {
+  border: 1px solid black;
+  border-radius: 2rem;
+  width: 90%;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  /* background-color: #405A93; */
+  /* color: #fff; */
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.Facebook-btn:hover,
+.Google-btn:hover,.Phone-btn:hover {
+  transition: transform 0.5s ease;
+  transform: scale(1.04);
+  overflow: hidden;
+}
+.OR {
+  color: lightslategray;
+}
+.Email-Title,
+.Password-Title
+{
+  font-size: 0.9rem;
+  font-weight: 600;
+  /* color: #000; */
+}
+.Text-Input {
+  width: 99%;
+  height: 5vh;
+  margin-top: 5px;
+  border: 1px solid black;
+  border-radius: 0.2rem;
+}
+
+.Sub-Box{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    width: 100%;
+    height: 8vh;
+}
+.Forgot-Pass{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.Signin-container{
-    height: 100vh;
+
+.DHAA{
+    width: 100%;
+    height: 8vh;
+
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
 }
-.Signin-Box{
-    width: 35%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
+
+

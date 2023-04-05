@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import "./Signin.css";
-import { CiFacebook } from "react-icons/ci";
+import { useNavigate } from "react-router-dom";
+import { BsFacebook } from "react-icons/Bs";
 import { FcGoogle } from "react-icons/Fc";
+import { UserContext } from ".././Context/ContextProvide";
+import supabase from "../../supabase";
 
 function Signin() {
+  const { User, setUser, Email, setEmail, Password, setPassword } =
+    useContext(UserContext);
+
+  const navigate = useNavigate();
+
+  const handleLogin = async (e) => {
+    let { data, error } = await supabase.auth.signInWithPassword({
+      email: Email,
+      password: Password,
+    });
+    setUser(data.user.id);
+    console.log(User);
+    if (error) {
+      alert(error.message);
+    } else {
+      navigate("/");
+    }
+  };
   return (
     <section>
       <div className="Signin-container">
@@ -24,35 +45,57 @@ function Signin() {
           </div>
           <div className="Sigin-Title">To continue, log in to Spotify.</div>
           <div className="Facebook">
-            <button><CiFacebook />CONTINUE WITH FACEBOOK</button>
+            <button className="Facebook-btn">
+              <BsFacebook size={25} fill="white" />
+              CONTINUE WITH FACEBOOK
+            </button>
           </div>
           <div className="Google">
-            <button><FcGoogle />CONTINUE WITH GOOGLE</button>
+            <button className="Google-btn">
+              <FcGoogle size={25} />
+              CONTINUE WITH GOOGLE
+            </button>
           </div>
           <div className="Phone">
-            <button>CONTINUE WITH PHONE NUMBER</button>
+            <button className="Phone-btn">CONTINUE WITH PHONE NUMBER</button>
           </div>
-          <div className="or">
+          <div className="OR">
             ----------------------or----------------------
           </div>
           <div className="Email">
             <div className="Email-Title">Email</div>
-            <input type="text" />
+            <input
+              type="text"
+              value={Email}
+              className="Text-Input"
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
 
           <div className="Password">
             <div className="Password-Title">Password</div>
-            <input type="text" />
+            <input
+              type="text"
+              value={Password}
+              className="Text-Input"
+              onChange={(e) => setPassword(e.target.value)}
+            />
           </div>
-          <div className="Forgot-Pass">
-            <div className="Forgot-Pass-Title">Forgot your password?</div>
-          </div>
-          <div className="Login-btn">
-            <button>LOG IN</button>
+          <div className="Sub-Box">
+            <div className="Forgot-Pass">
+              <div className="Forgot-Pass-Title">Forgot your password?</div>
+            </div>
+            <div className="Login-btn">
+              <button className="Signin-button" onClick={handleLogin}>
+                LOG IN
+              </button>
+            </div>
           </div>
           <div className="DHAA">Don't have an account?</div>
           <div className="Signup-btn">
-            <button>SIGN UP FOR SOPTIFY</button>
+            <button onClick={() => navigate("/Signup")} className="Google-btn">
+              SIGN UP FOR SOPTIFY
+            </button>
           </div>
         </div>
       </div>
