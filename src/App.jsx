@@ -18,6 +18,7 @@ function App() {
             <div className="Nav-Box">
               <div className="Logo">
                 <Link>
+                  {/* <img className="Logo-Img" src={Spotify} alt="Spotify" /> */}
                   <img className="Logo-Img" src={Logo} alt="Spotify" />
                 </Link>
               </div>
