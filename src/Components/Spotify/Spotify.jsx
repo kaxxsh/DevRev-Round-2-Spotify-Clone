@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "./Spotify.css";
 import { useNavigate } from "react-router-dom";
-import { AiOutlineHome } from "react-icons/ai";
+import { AiFillFastBackward, AiOutlineHome } from "react-icons/ai";
+import { BsFillPlayCircleFill } from "react-icons/bs";
+import { AiFillFastForward } from "react-icons/ai";
+// import { AiFillFastBackward } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
 import { IoLibraryOutline } from "react-icons/io5";
 import { BsFillPlusSquareFill } from "react-icons/bs";
@@ -10,12 +13,22 @@ import { FiDownload } from "react-icons/fi";
 import Home from "../LeftMain/Home";
 import Lib from "../LeftMain/Lib";
 import Search from "../LeftMain/Search";
+import { useEffect, useContext } from "react";
+import { UserContext } from "../Context/ContextProvide";
 
 // import { MdLanguage } from "react-icons/md";
 
 function Spotify() {
   const [Nav, setNav] = useState(1);
   const navigate = useNavigate();
+  const { User } = useContext(UserContext);
+
+  useEffect(() => {
+    console.log(User);
+    if (!User) {
+      navigate("/");
+    }
+  }, [User]);
   return (
     <>
       <div className="Soptify-Container">
@@ -106,7 +119,11 @@ function Spotify() {
           </div>
         </div>
       </div>
-      <div className="PlayLisener"></div>
+      <div className="PlayLisener">
+        <AiFillFastBackward size={40} fill="white" />
+        <BsFillPlayCircleFill size={40} fill="white" />
+        <AiFillFastForward size={40} fill="white" />
+      </div>
     </>
   );
 }

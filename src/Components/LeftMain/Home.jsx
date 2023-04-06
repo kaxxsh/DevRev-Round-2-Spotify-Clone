@@ -103,16 +103,16 @@ function Home({ setNav }) {
             console.log(img);
             return (
               <section>
-                <div className="Section-Welcome"> Deadpool</div>
+                <div className="Section-Welcome"> PlayList</div>
                 <div className="Recently-Played">
                   <div className="Recent-Box">
                     <div className="Played-Box">
                       <img className="Music-Img" src={img} />
-                      <div className="Music-Name">Movie</div>
+                      <div className="Music-Name">u1 Drugs</div>
                     </div>
                     <div className="Played-Box">
                       <img className="Music-Img" src={img} />
-                      <div className="Music-Name">Movie</div>
+                      <div className="Music-Name">U1 Hits</div>
                     </div>
                     <div className="Played-Box">
                       <img className="Music-Img" src={img} />
