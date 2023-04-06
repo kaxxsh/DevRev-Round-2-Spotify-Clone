@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import "./Signin.css";
 import { useNavigate } from "react-router-dom";
-import { BsFacebook } from "react-icons/Bs";
+import { BsFacebook } from "react-icons/bs";
 import { FcGoogle } from "react-icons/Fc";
 import { UserContext } from ".././Context/ContextProvide";
 import supabase from "../../supabase";
