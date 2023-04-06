@@ -6,31 +6,42 @@ function Userprovider({ children }) {
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
   const [User, setUser] = useState("");
+  const [SessionCheck, setSessionCheck] = useState(false);
 
-  // const handleSession = async () => {
-  //   const { data, error } = await supabase.auth.getSession();
-  //   setUser(data.session.user.id);
-  //   console.log(data, error);
-  // };
+  const handleSession = async () => {
+    const { data, error } = await supabase.auth.getSession();
+    // setUser(data.session.user.id);
+    if (data) {
+      try {
+        setUser(data.session.user.id);
+        setSessionCheck(true);
+      } catch (error) {
+        setSessionCheck(true);
+      }
+      console.log(data, error);
+    }
 
-  // useEffect(() => {
-  //   handleSession();
-  // }, []);
+    useEffect(() => {
+      handleSession();
+    }, []);
 
-  return (
-    <UserContext.Provider
-      value={{
-        User,
-        setUser,
-        Email,
-        setEmail,
-        Password,
-        setPassword,
-      }}
-    >
-      {children}
-    </UserContext.Provider>
-  );
+    return (
+      <UserContext.Provider
+        value={{
+          User,
+          setUser,
+          Email,
+          setEmail,
+          Password,
+          setPassword,
+          SessionCheck,
+          setSessionCheck,
+        }}
+      >
+        {children}
+      </UserContext.Provider>
+    );
+  };
 }
 
 export default Userprovider;

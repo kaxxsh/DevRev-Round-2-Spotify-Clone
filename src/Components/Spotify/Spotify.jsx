@@ -21,14 +21,15 @@ import { UserContext } from "../Context/ContextProvide";
 function Spotify() {
   const [Nav, setNav] = useState(1);
   const navigate = useNavigate();
-  const { User } = useContext(UserContext);
+  const { User, SessionCheck } = useContext(UserContext);
 
   useEffect(() => {
-    console.log(User);
-    if (!User) {
-      navigate("/");
+    if (SessionCheck) {
+      if (!User) {
+        navigate("/Login");
+      }
     }
-  }, [User]);
+  }, [SessionCheck]);
   return (
     <>
       <div className="Soptify-Container">
