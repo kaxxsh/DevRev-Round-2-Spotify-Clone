@@ -18,30 +18,30 @@ function Userprovider({ children }) {
       } catch (error) {
         setSessionCheck(true);
       }
-      console.log(data, error);
+      // console.log(data, error);
     }
-
-    useEffect(() => {
-      handleSession();
-    }, []);
-
-    return (
-      <UserContext.Provider
-        value={{
-          User,
-          setUser,
-          Email,
-          setEmail,
-          Password,
-          setPassword,
-          SessionCheck,
-          setSessionCheck,
-        }}
-      >
-        {children}
-      </UserContext.Provider>
-    );
   };
+
+  useEffect(() => {
+    handleSession();
+  }, []);
+
+  return (
+    <UserContext.Provider
+      value={{
+        User,
+        setUser,
+        Email,
+        setEmail,
+        Password,
+        setPassword,
+        SessionCheck,
+        setSessionCheck,
+      }}
+    >
+      {children}
+    </UserContext.Provider>
+  );
 }
 
 export default Userprovider;

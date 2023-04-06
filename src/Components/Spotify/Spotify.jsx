@@ -26,7 +26,7 @@ function Spotify() {
   useEffect(() => {
     if (SessionCheck) {
       if (!User) {
-        navigate("/Login");
+        navigate("/Signin");
       }
     }
   }, [SessionCheck]);

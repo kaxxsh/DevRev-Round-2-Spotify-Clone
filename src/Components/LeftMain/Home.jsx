@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoChevronBackCircleOutline } from "react-icons/io5";
 import { IoChevronForwardCircleOutline } from "react-icons/io5";
 import { BiUserCircle } from "react-icons/bi";
@@ -7,42 +7,49 @@ import { data } from "../Songs";
 
 function Home({ setNav }) {
   const navigate = useNavigate();
-  const [NavColour, setNavColour] = useState(false);
+  const [show, handleShow] = useState(false);
 
-  const ChangeNavColour = () => {
-    if (window.scrollY >= 748) {
-      setNavColour(true);
-    } else {
-      setNavColour(false);
-    }
-  };
+  console.log("show", show);
 
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        handleShow(true);
+      } else handleShow(false);
+    });
+    return () => {
+      window.removeEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          handleShow(true);
+        } else {
+          handleShow(false);
+        }
+      });
+    };
+  }, []);
 
-  window.addEventListener("scroll", ChangeNavColour);
   return (
     <>
-      <div className="Home-Container">
+      <div id="test" className="Home-Container">
         <nav>
-          <div
-            className={
-              NavColour ? "Nav-Container" : "Navbar Home-Nav-Container"
-            }
-          >
+          <div className={`Home-Nav-Container ${show && "Nav-Scroll"}`}>
             <div className="Navigation">
-              <div className="Nav-Back"  onClick={() => setNav(3)}>
-                <IoChevronBackCircleOutline size={35} />
+              <div className="nav-left">
+                <div className="Nav-Back" onClick={() => setNav(3)}>
+                  <IoChevronBackCircleOutline size={35} />
+                </div>
+                <div className="Nav-Next" onClick={() => setNav(2)}>
+                  <IoChevronForwardCircleOutline size={35} />
+                </div>
               </div>
-              <div className="Nav-Next" onClick={() => setNav(2)}>
-                <IoChevronForwardCircleOutline size={35} />
-              </div>
-            </div>
-            <div className="Nav-End">
-              <div className="Nav-upgrade" onClick={() => navigate("/")}>
-                update
-              </div>
-              <div className="Display-UserName">
-                <BiUserCircle size={26} fill="grey" />
-                Deadpool
+              <div className="Nav-End">
+                <div className="Nav-upgrade" onClick={() => navigate("/")}>
+                  update
+                </div>
+                <div className="Display-UserName">
+                  <BiUserCircle size={26} fill="grey" />
+                  Deadpool
+                </div>
               </div>
             </div>
           </div>
@@ -100,7 +107,6 @@ function Home({ setNav }) {
         </section>
         {data.map((data) => {
           return data.map((img) => {
-            console.log(img);
             return (
               <section>
                 <div className="Section-Welcome"> PlayList</div>
