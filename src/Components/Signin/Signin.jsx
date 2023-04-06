@@ -19,11 +19,7 @@ function Signin() {
     });
     setUser(data.user.id);
     console.log(User);
-    if (error) {
-      alert(error.message);
-    } else {
-      navigate("/Spotify");
-    }
+    navigate("/Spotify");
   };
   return (
     <section>
