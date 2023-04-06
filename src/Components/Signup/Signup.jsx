@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "./Signup.css";
 import { BsFacebook } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
@@ -23,7 +23,7 @@ function Signup() {
         },
       },
     });
-    
+    navigate("/Signin");
   };
   return (
     <main>
@@ -160,7 +160,10 @@ function Signup() {
               </button>
             </div>
             <div className="Nav-Signin">
-              Have an account? <span className="Signin" onClick={() =>navigate("/Signin")}>Log in</span>
+              Have an account?{" "}
+              <span className="Signin" onClick={() => navigate("/Signin")}>
+                Log in
+              </span>
             </div>
           </div>
         </div>

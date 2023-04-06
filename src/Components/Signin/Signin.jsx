@@ -13,6 +13,7 @@ function Signin() {
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
+    e.preventDefault();
     let { data, error } = await supabase.auth.signInWithPassword({
       email: Email,
       password: Password,
@@ -58,43 +59,52 @@ function Signin() {
           <div className="OR">
             ----------------------or----------------------
           </div>
-          <div className="Email">
-            <div className="Email-Title">Email</div>
-            <input
-              type="text"
-              value={Email}
-              placeholder="Email"
-              className="Text-Input"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-
-          <div className="Password">
-            <div className="Password-Title">Password</div>
-            <input
-              type="password"
-              value={Password}
-              placeholder="Password"
-              className="Text-Input"
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          <div className="Sub-Box">
-            <div className="Forgot-Pass">
-              <div className="Forgot-Pass-Title">Forgot your password?</div>
+          <form>
+            <div className="Email">
+              <div className="Email-Title">Email</div>
+              <input
+                type="text"
+                value={Email}
+                placeholder="Email"
+                className="Text-Input"
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
-            <div className="Login-btn">
-              <button className="Signin-button" onClick={handleLogin}>
-                LOG IN
+
+            <div className="Password">
+              <div className="Password-Title">Password</div>
+              <input
+                type="password"
+                value={Password}
+                placeholder="Password"
+                className="Text-Input"
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <div className="Sub-Box">
+              <div className="Forgot-Pass">
+                <div className="Forgot-Pass-Title">Forgot your password?</div>
+              </div>
+              <div className="Login-btn">
+                <button
+                  className="Signin-button"
+                  type="submit"
+                  onClick={handleLogin}
+                >
+                  LOG IN
+                </button>
+              </div>
+            </div>
+            <div className="DHAA">Don't have an account?</div>
+            <div className="Signup-btn">
+              <button
+                onClick={() => navigate("/Signup")}
+                className="Google-btn"
+              >
+                SIGN UP FOR SOPTIFY
               </button>
             </div>
-          </div>
-          <div className="DHAA">Don't have an account?</div>
-          <div className="Signup-btn">
-            <button onClick={() => navigate("/Signup")} className="Google-btn">
-              SIGN UP FOR SOPTIFY
-            </button>
-          </div>
+          </form>
         </div>
       </div>
     </section>

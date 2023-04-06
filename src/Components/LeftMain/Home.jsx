@@ -29,7 +29,7 @@ function Home({ setNav }) {
             }
           >
             <div className="Navigation">
-              <div className="Nav-Back" onClick={() => setNav(3)}>
+              <div className="Nav-Back"  onClick={() => setNav(3)}>
                 <IoChevronBackCircleOutline size={35} />
               </div>
               <div className="Nav-Next" onClick={() => setNav(2)}>
