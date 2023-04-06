@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Spotify.css";
 import { AiOutlineHome } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
 import { IoLibraryOutline } from "react-icons/io5";
 import { BsFillPlusSquareFill } from "react-icons/bs";
 import { BsChatSquareHeart } from "react-icons/bs";
+import { FiDownload } from "react-icons/fi";
+import Home from "../LeftMain/Home";
+import Lib from "../LeftMain/Lib";
+import Search from "../LeftMain/Search";
+
 // import { MdLanguage } from "react-icons/md";
 
 function Spotify() {
+  const [Nav, setNav] = useState(1);
   return (
     <>
       <div className="Soptify-Container">
@@ -29,20 +35,32 @@ function Spotify() {
           </div>
           <div className="Menu-Box">
             <ul>
-              <li>
-                <div className="Home-Logo">
+              <li
+                className={`Home-Logo ${Nav === 1 && "colourchange"}`}
+                id="1"
+                onClick={() => setNav(1)}
+              >
+                <div>
                   <AiOutlineHome size={28} />
                 </div>
                 <div className="Home-Title">Home</div>
               </li>
-              <li>
-                <div className="Home-Logo">
+              <li
+                className={`Search-Logo ${Nav === 2 && "colourchange"}`}
+                id="2"
+                onClick={() => setNav(2)}
+              >
+                <div>
                   <FiSearch size={28} />
                 </div>
                 <div className="Home-Title">Search</div>
               </li>
-              <li>
-                <div className="Home-Logo">
+              <li
+                className={`Library-Logo ${Nav === 3 && "colourchange"}`}
+                id="3"
+                onClick={() => setNav(3)}
+              >
+                <div>
                   <IoLibraryOutline size={28} />
                 </div>
                 <div className="Home-Title">Your Library</div>
@@ -63,15 +81,29 @@ function Spotify() {
           </div>
           <div className="Language-Container">
             <div className="Language-btn">
-              {/* <div className="Lan-Logo">
-                <MdLanguage size={28} />
-              </div> */}
-              <div className="Lan-Title">English</div>
+              <div className="Lan-Logo">
+                <FiDownload size={18} fill="rgba(255, 255, 255, 0.501)" />
+              </div>
+              <div className="Lan-Title">Install App</div>
             </div>
           </div>
         </div>
-        <div className="Main-Content"></div>
+        <div className="Main-Content">
+          <div className="Nav-Container">
+          
+            {Nav === 1 ? (
+              <Home {...{ Nav, setNav }} />
+            ) : Nav === 2 ? (
+              <Search {...{ Nav, setNav }} />
+            ) : Nav === 3 ? (
+              <Lib {...{ Nav, setNav }} />
+            ) : (
+              <div></div>
+            )}
+          </div>
+        </div>
       </div>
+      <div className="PlayLisener"></div>
     </>
   );
 }
