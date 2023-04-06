@@ -1,8 +1,8 @@
 import React,{useState} from "react";
 import "./Signup.css";
-import { BsFacebook } from "react-icons/Bs";
+import { BsFacebook } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
-import { FcGoogle } from "react-icons/Fc";
+import { FcGoogle } from "react-icons/fc";
 import supabase from "../../supabase";
 
 function Signup() {
