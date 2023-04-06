@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Spotify.css";
+import { useNavigate } from "react-router-dom";
 import { AiOutlineHome } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
 import { IoLibraryOutline } from "react-icons/io5";
@@ -14,6 +15,7 @@ import Search from "../LeftMain/Search";
 
 function Spotify() {
   const [Nav, setNav] = useState(1);
+  const navigate = useNavigate();
   return (
     <>
       <div className="Soptify-Container">
@@ -84,13 +86,14 @@ function Spotify() {
               <div className="Lan-Logo">
                 <FiDownload size={18} fill="rgba(255, 255, 255, 0.501)" />
               </div>
-              <div className="Lan-Title">Install App</div>
+              <div className="Lan-Title">
+                <a href="https://open.spotify.com/download">Install App</a>
+              </div>
             </div>
           </div>
         </div>
         <div className="Main-Content">
           <div className="Nav-Container">
-          
             {Nav === 1 ? (
               <Home {...{ Nav, setNav }} />
             ) : Nav === 2 ? (

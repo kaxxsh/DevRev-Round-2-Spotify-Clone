@@ -83,6 +83,15 @@ li:hover {
   width: 10vw;
   transform: translateY(14rem);
 }
+
+.Language-btn:hover {
+  color: green;
+  transform: scale(1.03);
+}
+
+.Made-Playlist-Box:hover {
+  transform: scale(1.04);
+}
 .Lan-Title {
   width: 10vh;
   font-size: 0.85rem;
@@ -164,4 +173,107 @@ li:hover {
   gap: 0.3rem;
   border: none;
   background-color: rgba(0, 0, 0, 0.59);
+}
+
+.Recently-Played {
+  width: 97.5%;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.Recent-Box {
+  width: 98%;
+  height: 13vh;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.Section-Welcome,
+.Made-Title {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: white;
+  position: relative;
+  left: 2rem;
+  width: 96%;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+}
+
+.Made-Title {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.Played-Box {
+  width: 35%;
+  height: 100%;
+  border: 1px solid white;
+  display: flex;
+}
+
+.Music-Img {
+  width: 25%;
+  height: 100%;
+}
+
+.Music-Name {
+  width: 75%;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Played-Box:hover {
+  border: 1px solid green;
+  transform: scale(1.03);
+}
+
+.Made-Box {
+  width: 97%;
+  height: 35vh;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.Made-Playlist-Box {
+  width: 11vw;
+  height: 28vh;
+  display: flex;
+  align-items: center;
+  /* gap: 1rem; */
+  flex-direction: column;
+  display: flex;
+  border: 1px solid white;
+  justify-content: space-evenly;
+}
+
+.Made-Img {
+  width: 80%;
+  height: 55%;
+  border: 1px solid white;
+}
+.Made-Name {
+  width: 80%;
+  height: 30%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  border: 1px solid white;
 }

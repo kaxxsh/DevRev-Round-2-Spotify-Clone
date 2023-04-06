@@ -45,9 +45,256 @@ function Home({ setNav }) {
             </div>
           </div>
         </nav>
-              <div className="Home-Content">
-                  
+        <section>
+          <div className="Section-Welcome">Good afternoon, Deadpool</div>
+          <div className="Recently-Played">
+            <div className="Recent-Box">
+              <div className="Played-Box">
+                <div className="Music-Img"></div>
+                <div className="Music-Name">Movie</div>
               </div>
+              <div className="Played-Box">
+                <div className="Music-Img"></div>
+                <div className="Music-Name">Movie</div>
+              </div>
+              <div className="Played-Box">
+                <div className="Music-Img"></div>
+                <div className="Music-Name">Movie</div>
+              </div>
+            </div>
+            <div className="Recent-Box">
+              <div className="Played-Box">
+                <div className="Music-Img"></div>
+                <div className="Music-Name">Movie</div>
+              </div>
+              <div className="Played-Box">
+                <div className="Music-Img"></div>
+                <div className="Music-Name">Movie</div>
+              </div>
+              <div className="Played-Box">
+                <div className="Music-Img"></div>
+                <div className="Music-Name">Movie</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="Made-container">
+            <div className="Made-Title">Made For Deadpool</div>
+            <div className="Made-Box">
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="Made-container">
+            <div className="Made-Title">Made For Deadpool</div>
+            <div className="Made-Box">
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="Made-container">
+            <div className="Made-Title">Made For Deadpool</div>
+            <div className="Made-Box">
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="Made-container">
+            <div className="Made-Title">Made For Deadpool</div>
+            <div className="Made-Box">
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="Made-container">
+            <div className="Made-Title">Made For Deadpool</div>
+            <div className="Made-Box">
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="Made-container">
+            <div className="Made-Title">Made For Deadpool</div>
+            <div className="Made-Box">
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="Made-container">
+            <div className="Made-Title">Made For Deadpool</div>
+            <div className="Made-Box">
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+              <div className="Made-Playlist-Box">
+                <div className="Made-Img"></div>
+                <div className="Made-Name">Name</div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
