@@ -19,7 +19,7 @@ import testx from "../../assets/test.mp3";
 
 // import { MdLanguage } from "react-icons/md";
 
-function Spotify() {
+function Spotify(Song) {
   const [Nav, setNav] = useState(1);
   const navigate = useNavigate();
   const { User, SessionCheck } = useContext(UserContext);
@@ -140,8 +140,6 @@ function Spotify() {
           <source src={testx} type="audio/mpeg" />
         </audio>
 
-        {/* <button>play</button>
-        <button onClick={handlePause}>pause</button> */}
         <AiFillFastBackward size={40} fill="white" />
         {Play ? (
           <BsFillPlayCircleFill onClick={handlePlay} size={40} fill="white" />

@@ -9,6 +9,7 @@ import ReactAudioPlayer from "react-audio-player";
 function Home({ setNav }) {
   const navigate = useNavigate();
   const [show, handleShow] = useState(false);
+  const [Song, setSong] = useState("");
 
   console.log("show", show);
 
@@ -60,12 +61,9 @@ function Home({ setNav }) {
           <div className="Section-Welcome">Good afternoon, Deadpool</div>
           <div className="Recently-Played">
             <div className="Recent-Box">
-         
-              
-
               {/* <ReactAudioPlayer src={testx} autoPlay controls /> */}
 
-              <div className="Played-Box">
+              <div className="Played-Box" onClick={() => setSong("testx")}>
                 <img
                   src="https://igimages.gumlet.io/tamil/home/naanevaruven300922_4.jpg?w=700&dpr=1.4"
                   alt=""
