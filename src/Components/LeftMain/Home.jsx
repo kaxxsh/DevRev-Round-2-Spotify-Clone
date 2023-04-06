@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { IoChevronBackCircleOutline } from "react-icons/io5";
 import { IoChevronForwardCircleOutline } from "react-icons/io5";
 import { BiUserCircle } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import { data } from "../Songs";
+import ReactAudioPlayer from "react-audio-player";
 
 function Home({ setNav }) {
   const navigate = useNavigate();
@@ -13,13 +14,13 @@ function Home({ setNav }) {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 70) {
         handleShow(true);
       } else handleShow(false);
     });
     return () => {
       window.removeEventListener("scroll", () => {
-        if (window.scrollY > 100) {
+        if (window.scrollY > 70) {
           handleShow(true);
         } else {
           handleShow(false);
@@ -27,6 +28,7 @@ function Home({ setNav }) {
       });
     };
   }, []);
+
 
   return (
     <>
@@ -58,6 +60,11 @@ function Home({ setNav }) {
           <div className="Section-Welcome">Good afternoon, Deadpool</div>
           <div className="Recently-Played">
             <div className="Recent-Box">
+         
+              
+
+              {/* <ReactAudioPlayer src={testx} autoPlay controls /> */}
+
               <div className="Played-Box">
                 <img
                   src="https://igimages.gumlet.io/tamil/home/naanevaruven300922_4.jpg?w=700&dpr=1.4"

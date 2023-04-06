@@ -301,5 +301,6 @@ img {
 }
 
 .Nav-Scroll {
-  background-color: forestgreen;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
 }

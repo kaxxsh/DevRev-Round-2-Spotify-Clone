@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./Spotify.css";
 import { useNavigate } from "react-router-dom";
 import { AiFillFastBackward, AiOutlineHome } from "react-icons/ai";
-import { BsFillPlayCircleFill } from "react-icons/bs";
+import { BsFillPlayCircleFill, BsFillPauseCircleFill } from "react-icons/bs";
 import { AiFillFastForward } from "react-icons/ai";
 // import { AiFillFastBackward } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
@@ -15,6 +15,7 @@ import Lib from "../LeftMain/Lib";
 import Search from "../LeftMain/Search";
 import { useEffect, useContext } from "react";
 import { UserContext } from "../Context/ContextProvide";
+import testx from "../../assets/test.mp3";
 
 // import { MdLanguage } from "react-icons/md";
 
@@ -22,6 +23,7 @@ function Spotify() {
   const [Nav, setNav] = useState(1);
   const navigate = useNavigate();
   const { User, SessionCheck } = useContext(UserContext);
+  const [Play, setPlay] = useState(false);
 
   useEffect(() => {
     if (SessionCheck) {
@@ -30,6 +32,19 @@ function Spotify() {
       }
     }
   }, [SessionCheck]);
+
+  const Aref = useRef(null);
+
+  const handlePlay = () => {
+    if (Play) {
+      Aref.current.play();
+      setPlay(!Play);
+    } else {
+      Aref.current.pause();
+      setPlay(!Play);
+    }
+  };
+
   return (
     <>
       <div className="Soptify-Container">
@@ -121,8 +136,18 @@ function Spotify() {
         </div>
       </div>
       <div className="PlayLisener">
+        <audio ref={Aref} controls style={{ height: "0", width: "0" }}>
+          <source src={testx} type="audio/mpeg" />
+        </audio>
+
+        {/* <button>play</button>
+        <button onClick={handlePause}>pause</button> */}
         <AiFillFastBackward size={40} fill="white" />
-        <BsFillPlayCircleFill size={40} fill="white" />
+        {Play ? (
+          <BsFillPlayCircleFill onClick={handlePlay} size={40} fill="white" />
+        ) : (
+          <BsFillPauseCircleFill onClick={handlePlay} size={40} fill="white" />
+        )}
         <AiFillFastForward size={40} fill="white" />
       </div>
     </>
