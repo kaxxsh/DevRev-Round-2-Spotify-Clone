@@ -32,7 +32,7 @@ function Spotify(Song) {
     if (SessionCheck) {
       if (!User) {
         // navigate("/Signin");
-        navigate("https://fantastic-starburst-d79fae.netlify.app/Signin");
+        navigate("/Signin");
       }
     }
   }, [SessionCheck]);

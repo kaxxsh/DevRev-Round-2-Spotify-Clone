@@ -31,7 +31,7 @@ function Signin() {
       provider: "google",
       options: {
         // redirectTo: "http://localhost:5173/Spotify",
-        redirectTo: "https://fantastic-starburst-d79fae.netlify.app/Spotify",
+        redirectTo: "/Spotify",
       },
     });
     setUser(data.user.id);
@@ -100,7 +100,7 @@ function Signin() {
           </div>
           <div className="Phone">
             <button className="Phone-btn" onClick={handlePhoneLogin}>
-              <BsSpotify size={25}  />
+              <BsSpotify size={25} />
               CONTINUE WITH SPOTIFY
             </button>
           </div>
