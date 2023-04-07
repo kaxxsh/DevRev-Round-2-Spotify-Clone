@@ -22,6 +22,24 @@ function Signin() {
     console.log(User);
     navigate("/Spotify");
   };
+
+  const handlegoogleLogin = async (e) => {
+    e.preventDefault();
+
+    let { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo: "http://localhost:5173/Spotify",
+        "https://642f22bb5c8fe4000858dfb1--melodious-puffpuff-1a289a.netlify.app/Spotify": true,
+      },
+    });
+    setUser(data.user.id);
+    console.log(User);
+    if (!error) {
+      navigate("/Spotify");
+    }
+  };
+
   return (
     <section>
       <div className="Signin-container">
@@ -48,7 +66,7 @@ function Signin() {
             </button>
           </div>
           <div className="Google">
-            <button className="Google-btn">
+            <button className="Google-btn" onClick={handlegoogleLogin}>
               <FcGoogle size={25} />
               CONTINUE WITH GOOGLE
             </button>
