@@ -23,13 +23,21 @@ function Signin() {
     navigate("/Spotify");
   };
 
+  // if (window.location.origin === "localhost:5173") {
+  //   const loc = "localhost:5173";
+  // } else {
+  //   const loc =
+  //     "642fbb9e059b57000824c933--fantastic-starburst-d79fae.netlify.app/";
+  // }
+
   const handlegoogleLogin = async (e) => {
     e.preventDefault();
 
     let { data, error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: window.location.origin + "/Spotify",
+        redirectTo:
+          "https://642fbb9e059b57000824c933--fantastic-starburst-d79fae.netlify.app/Spotify",
       },
     });
     setUser(data.user.id);

@@ -28,7 +28,10 @@ function Spotify(Song) {
   useEffect(() => {
     if (SessionCheck) {
       if (!User) {
-        navigate("/Signin");
+        // navigate("/Signin");
+        navigate(
+          "https://642fbb9e059b57000824c933--fantastic-starburst-d79fae.netlify.app/Signin"
+        );
       }
     }
   }, [SessionCheck]);
