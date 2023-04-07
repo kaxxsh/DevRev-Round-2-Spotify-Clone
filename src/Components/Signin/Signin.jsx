@@ -29,10 +29,9 @@ function Signin() {
     let { data, error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo:
-          "https://642f22bb5c8fe4000858dfb1--melodious-puffpuff-1a289a.netlify.app/Spotify",
+        // redirectTo: "http://localhost:5173/Spotify",
         // "https://642f22bb5c8fe4000858dfb1--melodious-puffpuff-1a289a.netlify.app/Spotify": true,
-        // redirectTo: window.location.origin,
+        redirectTo: window.location.origin + "/Spotify",
       },
     });
     setUser(data.user.id);
