@@ -30,8 +30,8 @@ function Signin() {
     let { data, error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        // redirectTo: "http://localhost:5173/Spotify",
-        redirectTo: "/Spotify",
+        redirectTo: "http://localhost:5173/Spotify",
+        // redirectTo: "/Spotify",
       },
     });
     setUser(data.user.id);
@@ -46,8 +46,8 @@ function Signin() {
     let { data, error } = await supabase.auth.signInWithOAuth({
       provider: "facebook",
       options: {
-        // redirectTo: "http://localhost:5173/Spotify",
-        redirectTo: "https://fantastic-starburst-d79fae.netlify.app/Spotify",
+        redirectTo: "http://localhost:5173/Spotify",
+        // redirectTo: "https://fantastic-starburst-d79fae.netlify.app/Spotify",
       },
     });
     setUser(data.user.id);
@@ -62,8 +62,8 @@ function Signin() {
     let { data, error } = await supabase.auth.signInWithOAuth({
       provider: "spotify",
       options: {
-        // redirectTo: "http://localhost:5173/Spotify",
-        redirectTo: "https://fantastic-starburst-d79fae.netlify.app/Spotify",
+        redirectTo: "http://localhost:5173/Spotify",
+        // redirectTo: "https://fantastic-starburst-d79fae.netlify.app/Spotify",
       },
     });
     setUser(data.user.id);
