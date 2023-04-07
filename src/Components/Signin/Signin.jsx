@@ -30,7 +30,7 @@ function Signin() {
     let { data, error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: "http://localhost:5173/Spotify",
+        redirectTo: "https://sensational-taffy-23b50c.netlify.app//Spotify",
       },
     });
     setUser(data.user.id);
@@ -97,7 +97,7 @@ function Signin() {
           </div>
           <div className="Phone">
             <button className="Phone-btn" onClick={handlePhoneLogin}>
-              <BsSpotify size={25}  />
+              <BsSpotify size={25} />
               CONTINUE WITH SPOTIFY
             </button>
           </div>
