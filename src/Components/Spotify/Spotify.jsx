@@ -24,14 +24,17 @@ function Spotify(Song) {
   const navigate = useNavigate();
   const { User, SessionCheck } = useContext(UserContext);
   const [Play, setPlay] = useState(false);
+  
 
+
+  // designed to work in the localhost not in the netlify
   useEffect(() => {
     if (SessionCheck) {
       if (!User) {
-        // navigate("/Signin");
-        navigate(
-          "https://642fbb9e059b57000824c933--fantastic-starburst-d79fae.netlify.app/Signin"
-        );
+        navigate("/Signin");
+        // navigate(
+        //   "https://642fbb9e059b57000824c933--fantastic-starburst-d79fae.netlify.app/Signin"
+        // );
       }
     }
   }, [SessionCheck]);

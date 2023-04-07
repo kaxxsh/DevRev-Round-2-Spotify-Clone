@@ -96,7 +96,7 @@ function App() {
               <div className="Premium-Description">
                 <div className="Description-Box">
                   <div className="Des-Img">
-                    <img src={Des1} alt="" />
+                    <img className="App-img" src={Des1} alt="" />
                   </div>
                   <div className="Des-Title">Ad-free music listening</div>
                   <div className="Des-Description">
@@ -105,7 +105,7 @@ function App() {
                 </div>
                 <div className="Description-Box">
                   <div className="Des-Img">
-                    <img src={Des2} alt="" />
+                    <img className="App-img" src={Des2} alt="" />
                   </div>
                   <div className="Des-Title">Offine playback</div>
                   <div className="Des-Description">
@@ -114,7 +114,7 @@ function App() {
                 </div>
                 <div className="Description-Box">
                   <div className="Des-Img">
-                    <img src={Des3} alt="" />
+                    <img className="App-img" src={Des3} alt="" />
                   </div>
                   <div className="Des-Title">Play everywhere</div>
                   <div className="Des-Description">
@@ -123,7 +123,7 @@ function App() {
                 </div>
                 <div className="Description-Box">
                   <div className="Des-Img">
-                    <img src={Des4} alt="" />
+                    <img className="App-img" src={Des4} alt="" />
                   </div>
                   <div className="Des-Title">Pay your way</div>
                   <div className="Des-Description">

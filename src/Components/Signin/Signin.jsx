@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import "./Signin.css";
 import { useNavigate } from "react-router-dom";
-import { BsFacebook } from "react-icons/bs";
+import { BsFacebook, BsSpotify } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import { UserContext } from ".././Context/ContextProvide";
 import supabase from "../../supabase";
@@ -23,21 +23,44 @@ function Signin() {
     navigate("/Spotify");
   };
 
-  // if (window.location.origin === "localhost:5173") {
-  //   const loc = "localhost:5173";
-  // } else {
-  //   const loc =
-  //     "642fbb9e059b57000824c933--fantastic-starburst-d79fae.netlify.app/";
-  // }
-
+  // designed to work in the localhost not in netlify host
   const handlegoogleLogin = async (e) => {
     e.preventDefault();
 
     let { data, error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo:
-          "https://642fbb9e059b57000824c933--fantastic-starburst-d79fae.netlify.app/Spotify",
+        redirectTo: "http://localhost:5173/Spotify",
+      },
+    });
+    setUser(data.user.id);
+    console.log(User);
+    if (!error) {
+      navigate("/Spotify");
+    }
+  };
+  const handlefacebookLogin = async (e) => {
+    e.preventDefault();
+
+    let { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "facebook",
+      options: {
+        redirectTo: "http://localhost:5173/Spotify",
+      },
+    });
+    setUser(data.user.id);
+    console.log(User);
+    if (!error) {
+      navigate("/Spotify");
+    }
+  };
+  const handlePhoneLogin = async (e) => {
+    e.preventDefault();
+
+    let { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "spotify",
+      options: {
+        redirectTo: "http://localhost:5173/Spotify",
       },
     });
     setUser(data.user.id);
@@ -67,9 +90,15 @@ function Signin() {
           </div>
           <div className="Sigin-Title">To continue, log in to Spotify.</div>
           <div className="Facebook">
-            <button className="Facebook-btn">
+            <button className="Facebook-btn" onClick={handlefacebookLogin}>
               <BsFacebook size={25} fill="white" />
               CONTINUE WITH FACEBOOK
+            </button>
+          </div>
+          <div className="Phone">
+            <button className="Phone-btn" onClick={handlePhoneLogin}>
+              <BsSpotify size={25}  />
+              CONTINUE WITH SPOTIFY
             </button>
           </div>
           <div className="Google">
@@ -77,9 +106,6 @@ function Signin() {
               <FcGoogle size={25} />
               CONTINUE WITH GOOGLE
             </button>
-          </div>
-          <div className="Phone">
-            <button className="Phone-btn">CONTINUE WITH PHONE NUMBER</button>
           </div>
           <div className="OR">
             ----------------------or----------------------

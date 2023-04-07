@@ -12,6 +12,38 @@ function Signup() {
   const [Gender, setGender] = useState("");
   const navigate = useNavigate();
 
+  const handlegoogleLogin = async (e) => {
+    e.preventDefault();
+
+    let { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo: "http://localhost:5173/Spotify",
+      },
+    });
+    setUser(data.user.id);
+    console.log(User);
+    if (!error) {
+      navigate("/Spotify");
+    }
+  };
+
+  const handlefacebookLogin = async (e) => {
+    e.preventDefault();
+
+    let { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "facebook",
+      options: {
+        redirectTo: "http://localhost:5173/Spotify",
+      },
+    });
+    setUser(data.user.id);
+    console.log(User);
+    if (!error) {
+      navigate("/Spotify");
+    }
+  };
+
   const handleSignup = async () => {
     const { data, error } = await supabase.auth.signUp({
       email: Email,
@@ -47,12 +79,12 @@ function Signup() {
             Sign up for free to start listening.
           </div>
           <div className="Facebook">
-            <button className="Facebook-btn">
+            <button className="Facebook-btn" onClick={handlefacebookLogin}>
               <BsFacebook size={25} fill="white" /> Sign up with Facebook
             </button>
           </div>
           <div className="Google">
-            <button className="Google-btn">
+            <button className="Google-btn" onClick={handlegoogleLogin}>
               <FcGoogle size={25} />
               Sign up with Google
             </button>

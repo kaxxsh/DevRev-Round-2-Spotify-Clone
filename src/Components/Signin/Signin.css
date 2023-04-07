@@ -51,7 +51,7 @@
   font-size: 0.8rem;
   font-weight: 700;
 }
-.Google-btn,.Phone-btn {
+.Google-btn {
   border: 1px solid black;
   border-radius: 2rem;
   width: 90%;
@@ -65,6 +65,23 @@
   font-size: 0.8rem;
   font-weight: 700;
 }
+.Phone-btn{
+  border: 1px solid black;
+  border-radius: 2rem;
+  width: 90%;
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: green;
+  color: #fff;
+  /* color: #fff; */
+  font-size: 0.8rem;
+  font-weight: 700;
+
+}
+
 .Facebook-btn:hover,
 .Google-btn:hover,.Phone-btn:hover {
   transition: transform 0.5s ease;
