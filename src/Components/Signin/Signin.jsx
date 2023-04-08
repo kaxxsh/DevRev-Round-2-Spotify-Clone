@@ -116,6 +116,7 @@ function Signin() {
           <form>
             <div className="Email">
               <div className="Email-Title">Email</div>
+
               <input
                 type="text"
                 value={Email}

@@ -21,10 +21,12 @@
   margin-left: 16vw;
   width: 84vw;
   height: 100%;
+  margin-bottom: 10vh;
   overflow-y: scroll;
   background-color: #181919;
-  background: linear-gradient(170deg, #181919, rgb(2, 17, 2));
+  background: linear-gradient(120deg, #181919, rgb(2, 17, 2));
 }
+
 
 .Logo {
   transform: translatex(1rem);

@@ -1,17 +1,14 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { IoChevronBackCircleOutline } from "react-icons/io5";
 import { IoChevronForwardCircleOutline } from "react-icons/io5";
 import { BiUserCircle } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
 import { data } from "../Songs";
-import ReactAudioPlayer from "react-audio-player";
 
 function Home({ setNav }) {
   const navigate = useNavigate();
   const [show, handleShow] = useState(false);
   const [Song, setSong] = useState("");
-
-  console.log("show", show);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -29,7 +26,6 @@ function Home({ setNav }) {
       });
     };
   }, []);
-
 
   return (
     <>
